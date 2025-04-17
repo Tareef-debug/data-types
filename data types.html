@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fun()">Use it</button>
+    <p id="hour"></p>
+    <p id="greet"></p>
+    <script>
+        var a = 5
+        var b = 10
+        var c = null
+        var d;
+        {
+            let a = 2
+            const b = 5
+        }
+        document.write(a==b)
+        document.write("<br>")
+        document.write(a)
+        document.write("<br>")
+        document.write(b)
+        document.write("<br>")
+        document.write(c)
+        document.write("<br>")
+        document.write(d)
+        function fun(){
+            var greet;
+            var time = new Date().getHours()
+            if (time < 10){
+                greet = "good morning"
+            }
+            else if (time < 20){
+                greet = "good afternoon"
+            }
+            else {
+                greet = "good evening"
+            }
+            document.getElementById("hour").innerHTML = "Current hour " + time
+            document.getElementById("greet").innerHTML = greet
+        }
+        
+    </script>
+</body>
+</html>
